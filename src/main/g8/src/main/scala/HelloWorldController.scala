@@ -8,15 +8,8 @@ import com.twitter.finatra.validation._
 case class HelloRequest(@RequestInject req: Request, @NotEmpty @QueryParam name: Option[String])
 
 class HelloWorldController extends Controller {
-
   get("/") { request: Request =>
-    response.ok.json("Welcome, please visit /hello")
-  }
-
-  get("/hello") { req: HelloRequest =>
-    info(s"I got here via a ${req.req.method} request!")
-    val name = req.name.getOrElse("Human")
-    response.ok.json(Map("msg" -> s"Hi there ${name}!"))
+    response.ok.json("Welcome!")
   }
 }
 
