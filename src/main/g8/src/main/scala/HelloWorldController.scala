@@ -1,5 +1,3 @@
-package $organization$.$name;format="lower,word"$
-
 import com.twitter.finagle.http.Request
 import com.twitter.finatra.http.Controller
 import com.twitter.finatra.request._
